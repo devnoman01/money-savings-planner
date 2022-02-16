@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Wallet</title>
 
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -14,7 +17,119 @@
 
 </head>
 <body>
-    
+
+    <!-- header part start -->
+    <header>
+        <h1 class="fw-bold text-center text-success">My Personal Wallet <i class="fa-solid fa-file-invoice-dollar text-success"></i></h1>
+    </header>
+    <!-- header part end -->
+
+    <!-- main part start -->
+    <main>
+
+        <!-- container section start -->
+        <section class="container px-2">
+
+            <div class="row">
+
+                <!-- left side image part start -->
+                <div class="col-md-6 col-sm-12 p-3">
+                    <img class="img-fluid side-img" src="images/saving.jpg" alt="">
+                </div>
+                <!-- left side image part end -->
+
+                <!-- right side functional part start -->
+                <div class="col-md-6 col-sm-12 p-3">
+                    <div class="functional-part p-4 text-center">
+
+                        <!-- income part start -->
+                        <h5 class="my-3">Income</h5>
+                        <div class="row align-items-center my-2">
+                            <div class="col-4 text-center">
+                                <label for="income-input" class="form-label">Income</label>
+                            </div>
+                            <div class="col-8 input-parent-field">
+                                <input type="number" class="similar-input mb-3" id="income-input" placeholder="Enter income amount">
+                                <span id="income-alert" class="alert-text">Income can't be negative</span>
+                            </div>
+                        </div>
+                        <!-- income part end -->
+
+                        <!-- expense part start -->
+                        <h5 class="my-3">Expenses</h5>
+                        <div class="row align-items-center my-2">
+                            <div class="col-4">
+                                <label for="food-expense" class="form-label">Food</label>
+                            </div>
+                            <div class="col-8 input-parent-field">
+                                <input type="number" class="similar-input" id="food-expense" placeholder="Enter food expense">
+                                <span id="food-alert" class="alert-text">Expense can't be negative</span>
+                            </div>
+                        </div>
+                        <div class="row align-items-center my-2">
+                            <div class="col-4">
+                                <label for="rent-expense" class="form-label">Rent</label>
+                            </div>
+                            <div class="col-8 input-parent-field">
+                                <input type="number" class="similar-input" id="rent-expense" placeholder="Enter rent expense">
+                                <span id="rent-alert" class="alert-text">Expense can't be negative</span>
+                            </div>
+                        </div>
+                        <div class="row align-items-center my-2">
+                            <div class="col-4">
+                                <label for="cloth-expense" class="form-label">Cloths</label>
+                            </div>
+                            <div class="col-8 input-parent-field">
+                                <input type="number" class="similar-input" id="cloth-expense" placeholder="Enter cloth expense">
+                                <span id="cloth-alert" class="alert-text">Expense can't be negative</span>
+                            </div>
+                        </div>
+                        <!-- expense part start -->
+
+                        <!-- button & total expense start -->
+                        <button onclick="expenseCalc()" class="btn btn-success py-1 px-5 my-2">Calculate</button>
+                        <h5 class="my-3">Total Expenses : </h5>
+                        <h5 class="my-3">Balance : </h5>
+                        <!-- button & total expense end -->
+
+                        <!-- saving input part start -->
+                        <div class="d-flex flex-row justify-content-center align-items-center my-2 mx-auto">
+                            <div class="">
+                                <label for="cloth-expense">Save:</label>
+                            </div>
+                            <div class="mx-2 input-parent-field">
+                                <input type="number" class="w-100" id="saving-input" placeholder="Enter saving percentage">
+                                <span id="saving-alert" class="alert-text">Saving can't be negative</span>
+                            </div>
+                            <div class="">
+                                <span class="fw-bold">%</span>
+                            </div>
+                            <div class="">
+                                <button class="btn btn-success py-1 px-4 my-2 ms-2"> Save</button>
+                            </div>
+                        </div>
+                        <!-- saving input part end -->
+
+                        <!-- saving & remaining balance part start -->
+                        <h5 class="my-3">Saving Amount : </h5>
+                        <h5 class="my-3">Remaining Balance : </h5>
+                        <!-- saving & remaining balance part start -->
+                        
+                    </div>
+                </div>
+                <!-- right side functional part start -->
+
+            </div>
+
+        </section>
+        <!-- container section end -->
+
+    </main>
+    <!-- main part end -->
+
+
+    <!-- fontawesome js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

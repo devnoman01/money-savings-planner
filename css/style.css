@@ -1,5 +1,78 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
 /* common css */
-* {
+*{
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
+}
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hiding increase/decrease arrow -
+    Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hiding increase/decrease arrow - Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* title css */
+header h1{
+    margin-top: 2rem;
+}
+
+.functional-part{
+    background-color: #F8F8F8;
+}
+
+/* label field common css */
+label{
+    font-weight: 500;
+}
+
+/* input field common css */
+input{
+    background-color: #DCDCDC;
+    outline: 1px solid lightgray;
+    border: none;
+}
+
+.similar-input{
+    width: 80%;
+}
+
+.input-parent-field{
+    position: relative;
+}
+
+/* alert text common css */
+.alert-text{
+    position:absolute;
+    top: 25px;
+    left: 36px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+
+
+/* mobile device css */
+@media screen and (max-width: 425px) {
+    header h1{
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+
+    }
 }
