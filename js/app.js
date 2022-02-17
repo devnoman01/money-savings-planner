@@ -1,3 +1,8 @@
+// input field will only take number type value
+// emply input field will show error message
+// negative number will show error message
+
+
 // input field value processing
 function getInputValue(id) {
     const inputFieldValue = document.getElementById(id);
