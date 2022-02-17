@@ -35,14 +35,16 @@
             <div class="row align-items-center">
 
                 <!-- left side image part start -->
-                <div class="col-md-6 col-sm-12 p-3 image-box animate__animated animate__fadeInBottomLeft animate__fast">
-                    <img class="img-fluid side-img" src="images/saving.jpg" alt="">
+                <div class="col-md-6 col-sm-12 p-3">
+                    <div class="image-box animate__animated animate__fadeInLeft animate__fast">
+                        <img class="img-fluid side-img" src="images/saving.jpg" alt="">
+                    </div>
                 </div>
                 <!-- left side image part end -->
 
                 <!-- right side functional part start -->
                 <div class="col-md-6 col-sm-12 p-3">
-                    <div class="functional-part text-center bg-success bg-opacity-10 animate__animated animate__fadeInBottomRight animate__fast">
+                    <div class="functional-part text-center bg-success bg-opacity-10 animate__animated animate__fadeInRight animate__fast">
 
                         <!-- income part start -->
                         <h5 class="my-3">Income</h5>
@@ -55,7 +57,7 @@
                                 
                             </div>
                         </div>
-                        <span id="income-alert" class="alert-text mb-3">Income can't be negative</span>
+                        <span id="income-input-alert" class="alert-text mb-3">Income input value error</span>
                         <!-- income part end -->
 
                         <!-- expense part start -->
@@ -68,7 +70,7 @@
                                 <input type="number" class="similar-input" id="food-expense" placeholder="Enter food expense">
                             </div>
                         </div>
-                        <span id="food-alert" class="alert-text">Expense can't be negative</span>
+                        <span id="food-expense-alert" class="alert-text">Food expense input value error</span>
 
                         <div class="row align-items-center my-2">
                             <div class="col-md-4 col-sm-12">
@@ -78,7 +80,7 @@
                                 <input type="number" class="similar-input" id="rent-expense" placeholder="Enter rent expense">
                             </div>
                         </div>
-                        <span id="rent-alert" class="alert-text">Expense can't be negative</span>
+                        <span id="rent-expense-alert" class="alert-text">Rent expense input value error</span>
 
                         <div class="row align-items-center my-2">
                             <div class="col-md-4 col-sm-12">
@@ -88,13 +90,13 @@
                                 <input type="number" class="similar-input" id="cloth-expense" placeholder="Enter cloth expense">
                             </div>
                         </div>
-                        <span id="cloth-alert" class="alert-text">Expense can't be negative</span>
+                        <span id="cloth-expense-alert" class="alert-text">Cloth expense input value error</span>
                         <!-- expense part start -->
 
                         <!-- button & total expense start -->
                         <div>
                             <button onclick="calculateBalance()" class="btn btn-success py-1 px-5 my-2">Calculate</button>
-                            <p id="expense-alert" class="alert-text">Expense can't be more than income </p>
+                            <p id="expense-error-alert" class="alert-text">Expense can't be more than income </p>
                         </div>
                         
                         <p class="result-text my-3">Total Expenses: <span id="total-expense"></span></p>
@@ -117,7 +119,7 @@
                                 <button onclick="calculateSaving()" class="btn btn-success py-1 px-4 my-2 ms-2"> Save</button>
                             </div>
                         </div>
-                        <span id="saving-negative-alert" class="alert-text">Saving can't be negative</span>
+                        <span id="saving-input-alert" class="alert-text">Saving input value error</span>
                         <span id="saving-exceed-alert" class="alert-text">Saving can't be more than balance</span>
                         <!-- saving input part end -->
 

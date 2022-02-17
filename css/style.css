@@ -23,6 +23,7 @@ h5{
     font-weight: 600;
 }
 .image-box{
+    padding: 20px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -46,6 +47,7 @@ h5{
 /* label field common css */
 label{
     font-weight: 500;
+    margin-top: 10px;
 }
 
 /* input field common css */
@@ -59,7 +61,7 @@ input{
     padding-left: 5px;
 }
 
-/* Hiding increase/decrease arrow -
+/* Hiding increase-decrease arrow -
 Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -82,6 +84,7 @@ input::placeholder {
 /* alert text common css */
 .alert-text{
     font-size: 14px;
+    font-weight: 500;
     color: red;
     display: none;
 }
@@ -105,9 +108,7 @@ input::placeholder {
         margin-top: 2rem;
 
     }
-    label{
-        margin-top: 10px;
-    }
+    
     input{
         width: 100%;
     }
