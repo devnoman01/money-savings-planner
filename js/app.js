@@ -17,7 +17,6 @@ function getInputValue(id) {
     else{
 
         var inputValue = parseFloat(inputFieldValue.value);
-
         // checking if input field have negative number or not
         if(inputValue>=0){
             

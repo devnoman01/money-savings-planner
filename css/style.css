@@ -14,11 +14,11 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-
 /* title css */
 header h1{
     margin-top: 2rem;
 }
+
 h5{
     font-weight: 600;
 }
@@ -29,12 +29,14 @@ h5{
     overflow: hidden;
     border-radius: 10px;
 }
+
 .image-box img{
     display: block;
     border-radius: 10px;
     transform: scale(1);
     transition: transform .4s linear;
 }
+
 .side-img:hover{
     transform: scale(1.2);
     transition: transform .4s linear;
@@ -69,10 +71,12 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 /* Hiding increase/decrease arrow - Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }
+
 input::placeholder {
     font-size: 13px;
     font-weight: 400;
@@ -91,6 +95,7 @@ input::placeholder {
     font-weight: 500;
     font-size: 1rem;
 }
+
 .result-text{
     font-size: 16px;
     font-weight: 600;
