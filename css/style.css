@@ -19,9 +19,28 @@ body{
 header h1{
     margin-top: 2rem;
 }
+h5{
+    font-weight: 600;
+}
+.image-box{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.image-box img{
+    display: block;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: transform .4s linear;
+}
+.side-img:hover{
+    transform: scale(1.2);
+    transition: transform .4s linear;
+}
 
 .functional-part{
-    background-color: #F8F8F8;
+    padding: 25px 20px;
+    border-radius: 10px;
 }
 
 /* label field common css */
@@ -31,11 +50,13 @@ label{
 
 /* input field common css */
 input{
-    background-color: #DCDCDC;
+    background-color: #ffffff;
     outline: 1px solid lightgray;
     border: none;
+    border-radius: 5px;
     font-weight: 500;
     height: 1.8rem;
+    padding-left: 5px;
 }
 
 /* Hiding increase/decrease arrow -
@@ -70,8 +91,9 @@ input::placeholder {
     font-weight: 500;
     font-size: 1rem;
 }
-#saving-input{
-    text-align: center;
+.result-text{
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
@@ -82,5 +104,15 @@ input::placeholder {
         margin-bottom: 1rem;
         margin-top: 2rem;
 
+    }
+    label{
+        margin-top: 10px;
+    }
+    input{
+        width: 100%;
+    }
+    .result-text{
+        font-size: 14px;
+        font-weight: 600;
     }
 }

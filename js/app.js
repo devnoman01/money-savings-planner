@@ -1,3 +1,4 @@
+// input field value processing
 function getInputValue(id) {
     const inputFieldValue = document.getElementById(id);
     var inputValue = parseInt(inputFieldValue.value);
@@ -6,11 +7,13 @@ function getInputValue(id) {
     // document.getElementById(id).style.border = "2px solid red";
 }
 
+// income calculation
 function incomeCalculation() {
     const incomeAmount = getInputValue('income-input');
     return incomeAmount;
 }
 
+// total expense calculation
 function expenseCalculation() {
     const foodExpense = getInputValue('food-expense');
     const rentxpense = getInputValue('rent-expense');
@@ -20,10 +23,12 @@ function expenseCalculation() {
     return totalExpense;
 }
 
+// balance calculation
 function balanceCalculation() {
     const income = incomeCalculation();
     const expense = expenseCalculation();
 
+    // checking if expense is greater than income
     if(expense > income){
         document.getElementById('expense-alert').style.display = "block";
     }
@@ -36,11 +41,11 @@ function balanceCalculation() {
 }
 
 
-
+// calculate button function
 function calculateBalance() {
-    
     expenseCalculation(); 
     balanceCalculation(); 
-    
 }
+
+
 
