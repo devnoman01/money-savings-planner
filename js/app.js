@@ -7,6 +7,7 @@
 function getInputValue(id) {
     const inputFieldValue = document.getElementById(id);
 
+    // checking if input field is empty or not
     if((inputFieldValue.value).length == 0){
         document.getElementById(id + '-alert').style.display = "block";
         return;
@@ -14,6 +15,7 @@ function getInputValue(id) {
     else{
         var inputValue = parseFloat(inputFieldValue.value);
 
+        // checking if input field have negative number or not
         if(inputValue>=0){
             document.getElementById(id + '-alert').style.display = "none";
             return inputValue;
@@ -28,12 +30,14 @@ function getInputValue(id) {
 
 // income calculation
 function incomeCalculation() {
+
     const incomeAmount = getInputValue('income-input');
     return incomeAmount;
 }
 
 // total expense calculation
 function expenseCalculation() {
+
     const foodExpense = getInputValue('food-expense');
     const rentxpense = getInputValue('rent-expense');
     const clothExpense = getInputValue('cloth-expense');
@@ -43,18 +47,22 @@ function expenseCalculation() {
 
 // balance calculation
 function balanceCalculation() {
-    console.log("balanceCalc function called");
+
     const income = incomeCalculation();
     const expense = expenseCalculation();
 
-    // checking if expense is greater than income
+    // checking if expense is less than income
     if(expense <= income){
+        // updating expense amount
         document.getElementById('total-expense').innerText = expense;
         document.getElementById('expense-error-alert').style.display = "none";
         const balanceAmount = income - expense;
+        // updating balance amount
         document.getElementById('balance-amount').innerText = balanceAmount;
         return balanceAmount;
     }
+
+    // checking if expense is more than income
     else if(expense > income){
         document.getElementById('expense-error-alert').style.display = "block";
     }
@@ -62,27 +70,40 @@ function balanceCalculation() {
 
 // saving calculation
 function savingCalculation() {
+
     const savingPercentage = getInputValue('saving-input');
     const savingAmount = (incomeCalculation() / 100) * savingPercentage;
     const balanceAmount = balanceCalculation();
+    // checking if saving amount is more than balance amount
     if (savingAmount > balanceAmount) {
+
         document.getElementById('saving-exceed-alert').style.display = "block";
     }
+    // checking if saving amount is more than balance
     else if(savingAmount < balanceAmount){
+
         document.getElementById('saving-exceed-alert').style.display = "none";
+        // updating saving amount
         document.getElementById('saving-amount').innerText = savingAmount;
+        // updating remaining balance
         document.getElementById('remaining-balance').innerText = balanceCalculation() - savingAmount;
         return savingAmount;
     }
-
 }
+
 // calculate button function
 function calculateBalance() {
+
+    document.getElementById('total-expense').innerText = "";
+    document.getElementById('balance-amount').innerText = "";
     balanceCalculation(); 
 }
 
 // save button function
 function calculateSaving() {
+    
+    document.getElementById('saving-amount').innerText = "";
+    document.getElementById('remaining-balance').innerText = "";
     savingCalculation();
 }
 
