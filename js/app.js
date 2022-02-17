@@ -110,10 +110,10 @@ function savingCalculation() {
 document.getElementById('calculate-btn').addEventListener('click', function() {
 
     balanceCalculation(); 
-})
+});
 
 // save button eventlistener
 document.getElementById('save-btn').addEventListener('click', function(){
 
     savingCalculation();
-})
+});
