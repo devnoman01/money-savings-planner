@@ -14,18 +14,6 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-/* Hiding increase/decrease arrow -
-    Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Hiding increase/decrease arrow - Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
 
 /* title css */
 header h1{
@@ -46,24 +34,44 @@ input{
     background-color: #DCDCDC;
     outline: 1px solid lightgray;
     border: none;
+    font-weight: 500;
+    height: 1.8rem;
+}
+
+/* Hiding increase/decrease arrow -
+Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Hiding increase/decrease arrow - Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .similar-input{
     width: 80%;
 }
 
-.input-parent-field{
-    position: relative;
-}
-
 /* alert text common css */
 .alert-text{
-    position:absolute;
-    top: 25px;
-    left: 36px;
-    font-size: 12px;
+    font-size: 14px;
     color: red;
     display: none;
+}
+
+.expense-alert{
+    /* display: none; */
+    font-weight: 500;
+    font-size: 1rem;
+}
+#saving-input{
+    text-align: center;
 }
 
 

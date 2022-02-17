@@ -48,11 +48,12 @@
                             <div class="col-4 text-center">
                                 <label for="income-input" class="form-label">Income</label>
                             </div>
-                            <div class="col-8 input-parent-field">
-                                <input type="number" class="similar-input mb-3" id="income-input" placeholder="Enter income amount">
-                                <span id="income-alert" class="alert-text">Income can't be negative</span>
+                            <div class="col-8">
+                                <input type="number" class="similar-input" id="income-input" placeholder="Enter income amount">
+                                
                             </div>
                         </div>
+                        <span id="income-alert" class="alert-text mb-3">Income can't be negative</span>
                         <!-- income part end -->
 
                         <!-- expense part start -->
@@ -61,35 +62,41 @@
                             <div class="col-4">
                                 <label for="food-expense" class="form-label">Food</label>
                             </div>
-                            <div class="col-8 input-parent-field">
+                            <div class="col-8">
                                 <input type="number" class="similar-input" id="food-expense" placeholder="Enter food expense">
-                                <span id="food-alert" class="alert-text">Expense can't be negative</span>
                             </div>
                         </div>
+                        <span id="food-alert" class="alert-text">Expense can't be negative</span>
+
                         <div class="row align-items-center my-2">
                             <div class="col-4">
                                 <label for="rent-expense" class="form-label">Rent</label>
                             </div>
-                            <div class="col-8 input-parent-field">
+                            <div class="col-8">
                                 <input type="number" class="similar-input" id="rent-expense" placeholder="Enter rent expense">
-                                <span id="rent-alert" class="alert-text">Expense can't be negative</span>
                             </div>
                         </div>
+                        <span id="rent-alert" class="alert-text">Expense can't be negative</span>
+
                         <div class="row align-items-center my-2">
                             <div class="col-4">
                                 <label for="cloth-expense" class="form-label">Cloths</label>
                             </div>
-                            <div class="col-8 input-parent-field">
+                            <div class="col-8">
                                 <input type="number" class="similar-input" id="cloth-expense" placeholder="Enter cloth expense">
-                                <span id="cloth-alert" class="alert-text">Expense can't be negative</span>
                             </div>
                         </div>
+                        <span id="cloth-alert" class="alert-text">Expense can't be negative</span>
                         <!-- expense part start -->
 
                         <!-- button & total expense start -->
-                        <button onclick="expenseCalc()" class="btn btn-success py-1 px-5 my-2">Calculate</button>
-                        <h5 class="my-3">Total Expenses : </h5>
-                        <h5 class="my-3">Balance : </h5>
+                        <div>
+                            <button onclick="calculateBalance()" class="btn btn-success py-1 px-5 my-2">Calculate</button>
+                            <p id="expense-alert" class="alert-text">Expense can't be more than income </p>
+                        </div>
+                        
+                        <h5 class="my-3">Total Expenses: <span id="total-expense"></span></h5>
+                        <h5 class="my-3">Balance: <span id="balance-amount"></span></h5>
                         <!-- button & total expense end -->
 
                         <!-- saving input part start -->
@@ -97,22 +104,24 @@
                             <div class="">
                                 <label for="cloth-expense">Save:</label>
                             </div>
-                            <div class="mx-2 input-parent-field">
+                            <div class="mx-2">
                                 <input type="number" class="w-100" id="saving-input" placeholder="Enter saving percentage">
-                                <span id="saving-alert" class="alert-text">Saving can't be negative</span>
+                                
                             </div>
                             <div class="">
                                 <span class="fw-bold">%</span>
                             </div>
                             <div class="">
-                                <button class="btn btn-success py-1 px-4 my-2 ms-2"> Save</button>
+                                <button onclick="calculateSaving()" class="btn btn-success py-1 px-4 my-2 ms-2"> Save</button>
                             </div>
                         </div>
+                        <span id="saving-negative-alert" class="alert-text">Saving can't be negative</span>
+                        <span id="saving-exceed-alert" class="alert-text">Saving can't be more than balance</span>
                         <!-- saving input part end -->
 
                         <!-- saving & remaining balance part start -->
-                        <h5 class="my-3">Saving Amount : </h5>
-                        <h5 class="my-3">Remaining Balance : </h5>
+                        <h5 class="my-3">Saving Amount: <span id="saving-amount"></span></h5>
+                        <h5 class="my-3">Remaining Balance: <span id="remaining-balance"></span></h5>
                         <!-- saving & remaining balance part start -->
                         
                     </div>
