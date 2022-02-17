@@ -91,19 +91,17 @@ function savingCalculation() {
     }
 }
 
-// calculate button function
-function calculateBalance() {
+// calculate button eventlistener
+document.getElementById('calculate-btn').addEventListener('click', function() {
 
     document.getElementById('total-expense').innerText = "";
     document.getElementById('balance-amount').innerText = "";
     balanceCalculation(); 
-}
+})
 
-// save button function
-function calculateSaving() {
-    
+// save button eventlistener
+document.getElementById('save-btn').addEventListener('click', function(){
     document.getElementById('saving-amount').innerText = "";
     document.getElementById('remaining-balance').innerText = "";
     savingCalculation();
-}
-
+})

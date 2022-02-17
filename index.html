@@ -97,7 +97,7 @@
 
                         <!-- button & total expense start -->
                         <div>
-                            <button onclick="calculateBalance()" class="btn btn-success py-1 px-5 my-2">Calculate</button>
+                            <button id="calculate-btn" class="btn btn-success py-1 px-5 my-2">Calculate</button>
                             <p id="expense-error-alert" class="alert-text">Expense can't be more than income </p>
                         </div>
                         
@@ -118,7 +118,7 @@
                                 <span class="fw-bold">%</span>
                             </div>
                             <div class="">
-                                <button onclick="calculateSaving()" class="btn btn-success py-1 px-4 my-2 ms-2"> Save</button>
+                                <button id="save-btn" class="btn btn-success py-1 px-4 my-2 ms-2"> Save</button>
                             </div>
                         </div>
                         <span id="saving-input-alert" class="alert-text">Saving input value error</span>
