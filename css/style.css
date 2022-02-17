@@ -1,5 +1,5 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
 /* common css */
@@ -22,8 +22,9 @@ header h1{
 h5{
     font-weight: 600;
 }
+
+/* side image css */
 .image-box{
-    padding: 20px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -39,15 +40,15 @@ h5{
     transition: transform .4s linear;
 }
 
+/* functional part css */
 .functional-part{
-    padding: 25px 20px;
+    padding: 25px 80px;
     border-radius: 10px;
 }
 
 /* label field common css */
 label{
     font-weight: 500;
-    margin-top: 10px;
 }
 
 /* input field common css */
@@ -77,10 +78,6 @@ input::placeholder {
     font-weight: 400;
 }
 
-.similar-input{
-    width: 80%;
-}
-
 /* alert text common css */
 .alert-text{
     font-size: 14px;
@@ -104,13 +101,16 @@ input::placeholder {
 /* mobile device css */
 @media screen and (max-width: 425px) {
     header h1{
+        font-size: 20px;
+        font-weight: bold;
         margin-bottom: 1rem;
         margin-top: 2rem;
-
     }
-    
-    input{
-        width: 100%;
+    .functional-part{
+        padding: 20px 15px;
+    }
+    .image-box{
+        padding: 0px;
     }
     .result-text{
         font-size: 14px;

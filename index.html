@@ -55,11 +55,12 @@
                                 <label for="income-input" class="form-label">Income</label>
                             </div>
                             <div class="col-md-8 col-sm-12">
-                                <input type="number" class="similar-input" id="income-input" placeholder="Enter income amount">
+                                <input type="number" class="similar-input form-control" id="income-input" placeholder="Enter income amount">
                                 
                             </div>
                         </div>
                         <span id="income-input-alert" class="alert-text mb-3">Income input value error</span>
+                        <span id="income-input-negative" class="alert-text">Negative value not supported</span>
                         <!-- income part end -->
 
                         <!-- expense part start -->
@@ -69,30 +70,33 @@
                                 <label for="food-expense" class="form-label">Food</label>
                             </div>
                             <div class="col-md-8 col-sm-12">
-                                <input type="number" class="similar-input" id="food-expense" placeholder="Enter food expense">
+                                <input type="number" class="similar-input form-control" id="food-expense" placeholder="Enter food expense">
                             </div>
                         </div>
                         <span id="food-expense-alert" class="alert-text">Food expense input value error</span>
+                        <span id="food-expense-negative" class="alert-text">Negative value not supported</span>
 
                         <div class="row align-items-center my-2">
                             <div class="col-md-4 col-sm-12">
                                 <label for="rent-expense" class="form-label">Rent</label>
                             </div>
                             <div class="col-md-8 col-sm-12">
-                                <input type="number" class="similar-input" id="rent-expense" placeholder="Enter rent expense">
+                                <input type="number" class="similar-input form-control" id="rent-expense" placeholder="Enter rent expense">
                             </div>
                         </div>
                         <span id="rent-expense-alert" class="alert-text">Rent expense input value error</span>
+                        <span id="rent-expense-negative" class="alert-text">Negative value not supported</span>
 
                         <div class="row align-items-center my-2">
                             <div class="col-md-4 col-sm-12">
                                 <label for="cloth-expense" class="form-label">Cloths</label>
                             </div>
                             <div class="col-md-8 col-sm-12">
-                                <input type="number" class="similar-input" id="cloth-expense" placeholder="Enter cloth expense">
+                                <input type="number" class="similar-input form-control" id="cloth-expense" placeholder="Enter cloth expense">
                             </div>
                         </div>
                         <span id="cloth-expense-alert" class="alert-text">Cloth expense input value error</span>
+                        <span id="cloth-expense-negative" class="alert-text">Negative value not supported</span>
                         <!-- expense part start -->
 
                         <!-- button & total expense start -->
@@ -111,7 +115,7 @@
                                 <label for="cloth-expense">Save:</label>
                             </div>
                             <div class="mx-2">
-                                <input type="number" class="w-100" id="saving-input" placeholder="Enter saving %">
+                                <input type="number" class="form-control" id="saving-input" placeholder="Enter saving %">
                                 
                             </div>
                             <div class="">
@@ -122,6 +126,7 @@
                             </div>
                         </div>
                         <span id="saving-input-alert" class="alert-text">Saving input value error</span>
+                        <span id="saving-input-negative" class="alert-text">Negative value not supported</span>
                         <span id="saving-exceed-alert" class="alert-text">Saving can't be more than balance</span>
                         <!-- saving input part end -->
 

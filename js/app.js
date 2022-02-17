@@ -5,7 +5,9 @@
 
 // input field value processing
 function getInputValue(id) {
+
     const inputFieldValue = document.getElementById(id);
+    document.getElementById(id + '-negative').style.display = "none";
 
     // checking if input field is empty or not
     if((inputFieldValue.value).length == 0){
@@ -13,16 +15,19 @@ function getInputValue(id) {
         return;
     }
     else{
+
         var inputValue = parseFloat(inputFieldValue.value);
 
         // checking if input field have negative number or not
         if(inputValue>=0){
+            
             document.getElementById(id + '-alert').style.display = "none";
             return inputValue;
         }
-        else{
-            document.getElementById(id + '-alert').style.display = "block";
-            document.getElementById(id + '-alert').innerText = "Negative input not supported";
+        else if(inputValue<0){
+
+            document.getElementById(id + '-alert').style.display = "none";
+            document.getElementById(id + '-negative').style.display = "block";
             return;
         }
     }
@@ -48,11 +53,15 @@ function expenseCalculation() {
 // balance calculation
 function balanceCalculation() {
 
+    document.getElementById('total-expense').innerText = "";
+    document.getElementById('balance-amount').innerText = "";
+
     const income = incomeCalculation();
     const expense = expenseCalculation();
 
     // checking if expense is less than income
     if(expense <= income){
+
         // updating expense amount
         document.getElementById('total-expense').innerText = expense;
         document.getElementById('expense-error-alert').style.display = "none";
@@ -64,12 +73,18 @@ function balanceCalculation() {
 
     // checking if expense is more than income
     else if(expense > income){
+
         document.getElementById('expense-error-alert').style.display = "block";
     }
 }
 
 // saving calculation
 function savingCalculation() {
+
+    document.getElementById('saving-amount').innerText = "";
+    document.getElementById('remaining-balance').innerText = "";
+    document.getElementById('saving-input-alert').style.display = "none";
+    document.getElementById('saving-exceed-alert').style.display = "none";
 
     const savingPercentage = getInputValue('saving-input');
     const savingAmount = (incomeCalculation() / 100) * savingPercentage;
@@ -78,9 +93,10 @@ function savingCalculation() {
     if (savingAmount > balanceAmount) {
 
         document.getElementById('saving-exceed-alert').style.display = "block";
+        
     }
     // checking if saving amount is more than balance
-    else if(savingAmount < balanceAmount){
+    else if(savingAmount <= balanceAmount){
 
         document.getElementById('saving-exceed-alert').style.display = "none";
         // updating saving amount
@@ -94,14 +110,11 @@ function savingCalculation() {
 // calculate button eventlistener
 document.getElementById('calculate-btn').addEventListener('click', function() {
 
-    document.getElementById('total-expense').innerText = "";
-    document.getElementById('balance-amount').innerText = "";
     balanceCalculation(); 
 })
 
 // save button eventlistener
 document.getElementById('save-btn').addEventListener('click', function(){
-    document.getElementById('saving-amount').innerText = "";
-    document.getElementById('remaining-balance').innerText = "";
+
     savingCalculation();
 })
